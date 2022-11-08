@@ -6,7 +6,7 @@
 /*   By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 15:22:29 by dmaldona          #+#    #+#             */
-/*   Updated: 2022/11/08 16:20:36 by dmaldona         ###   ########.fr       */
+/*   Updated: 2022/11/08 16:35:20 by dmaldona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putunbr_fd_base(unsigned int n, int fd, char *base)
 {
-    size_t  m;
+	size_t	m;
 	size_t	base_size;
 
 	m = (size_t)n;
