@@ -6,8 +6,14 @@
 /*   By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:24:28 by dmaldona          #+#    #+#             */
-/*   Updated: 2022/11/07 19:24:58 by dmaldona         ###   ########.fr       */
+/*   Updated: 2022/11/08 13:15:59 by dmaldona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "src.h"
+
+int	char_handler(char c, int fd)
+{
+	ft_putchar_fd(c, fd);
+	return (1);
+}

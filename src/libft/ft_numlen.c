@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   src.h                                              :+:      :+:    :+:   */
+/*   ft_numlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 19:21:51 by dmaldona          #+#    #+#             */
-/*   Updated: 2022/11/08 15:49:11 by dmaldona         ###   ########.fr       */
+/*   Created: 2022/11/08 15:31:56 by dmaldona          #+#    #+#             */
+/*   Updated: 2022/11/08 15:34:50 by dmaldona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SRC_H
-# define SRC_H
-# include "libft/libft.h"
+#include "libft.h"
 
-int	char_handler(char c, int fd);
-int	str_handler(char *s, int fd);
-int	num_handler(int n, int fd, char *base);
-int	uns_handler(unsigned int n, int fd, char *base);
-int addr_handler(void *ptr);
+size_t	ft_numlen(size_t n, char *base)
+{
+    size_t  m;
+    int     base_size;
 
-#endif
+    m = 0;
+    base_size = ft_strlen(base);
+    while (n > 0)
+	{
+		n /= base_size;
+		m++;
+	}
+	if (m)
+		return (m);
+	else
+		return (1);
+}

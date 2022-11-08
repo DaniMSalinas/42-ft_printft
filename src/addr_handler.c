@@ -1,26 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   addr_handler.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/02 13:52:29 by dmaldona          #+#    #+#             */
-/*   Updated: 2022/09/21 21:46:13 by dmaldona         ###   ########.fr       */
+/*   Created: 2022/11/08 15:47:14 by dmaldona          #+#    #+#             */
+/*   Updated: 2022/11/08 16:19:46 by dmaldona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "src.h"
 
-void	*ft_calloc(size_t count, size_t size)
+int addr_handler(void *ptr)
 {
-	void	*ptr;
-
-	if (size && count && (count > SIZE_MAX / size))
-		return (NULL);
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (ptr);
-	ft_bzero(ptr, size * count);
-	return (ptr);
+    write(1, "0x", 2);
+    return (uns_handler((size_t)ptr, 1, "0123456789abcdef") + 2);
 }
