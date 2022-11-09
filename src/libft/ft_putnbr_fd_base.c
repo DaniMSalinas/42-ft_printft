@@ -6,7 +6,7 @@
 /*   By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 14:17:19 by dmaldona          #+#    #+#             */
-/*   Updated: 2022/11/08 15:12:58 by dmaldona         ###   ########.fr       */
+/*   Updated: 2022/11/09 14:09:59 by dmaldona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	ft_putnbr_fd_base(int n, int fd, char *base)
 {
 	long	m;
+	char	str;
 	int		base_size;
 
 	m = (long)n;
@@ -25,8 +26,8 @@ void	ft_putnbr_fd_base(int n, int fd, char *base)
 		m *= -1;
 		write(fd, "-", 1);
 	}
-	if (m > base_size)
+	if (m > base_size - 1)
 		ft_putnbr_fd_base(m / base_size, fd, base);
-	m %= base_size;
-	write (fd, &base[m], 1);
+	str = m % base_size + '0';
+	write (fd, &str, 1);
 }

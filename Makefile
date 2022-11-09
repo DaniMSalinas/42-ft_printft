@@ -6,7 +6,7 @@
 #    By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 19:26:50 by dmaldona          #+#    #+#              #
-#    Updated: 2022/11/08 12:04:39 by dmaldona         ###   ########.fr        #
+#    Updated: 2022/11/09 11:32:14 by dmaldona         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,18 @@ SRCS	= main.c\
 			ft_printf.c\
 			src/libft/ft_strlen.c\
 			src/libft/ft_putstr_fd.c\
-			src/libft/ft_putnbr_fd.c\
 			src/libft/ft_putchar_fd.c\
+			src/libft/ft_numlen.c\
+			src/libft/ft_putnbr_fd_base.c\
+			src/libft/ft_putunbr_fd.c\
 			src/char_handler.c\
-			src/dec_handler.c\
-			src/hex_handler.c\
-			src/str_handler.c
+			src/str_handler.c\
+			src/addr_handler.c\
+			src/num_handler.c\
+			src/uns_handler.c
 
 OBJS	= $(SRCS:%.c=%.o)
 NAME	= libftprintf.a
-
 
 $(NAME):	$(OBJS)
 				ar rc $(NAME) $(OBJS)
