@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_handler.c                                      :+:      :+:    :+:   */
+/*   ft_putaddr_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 19:24:45 by dmaldona          #+#    #+#             */
-/*   Updated: 2022/11/21 12:49:55 by dmaldona         ###   ########.fr       */
+/*   Created: 2022/11/21 13:54:50 by dmaldona          #+#    #+#             */
+/*   Updated: 2022/11/21 14:07:30 by dmaldona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "src.h"
+#include "libft.h"
 
-int	str_handler(char *s, int fd)
+int	ft_putaddr_fd(unsigned long int n, int fd)
 {
-	if (!s)
-		s = "(null)";
-	ft_putstr_fd(s, fd);
-	return (ft_strlen(s));
+	static int	i;
+    char		*base;
+
+    base = "0123456789abcdef";
+	i = 0;
+	if (n >= 16)
+		ft_putaddr_fd(n / 16, fd);
+	n %= 16;
+	write (fd, &base[n], 1);
+	return (i++);
 }

@@ -20,6 +20,7 @@ SRCS	= main.c\
 			src/libft/ft_numlen.c\
 			src/libft/ft_putnbr_fd_base.c\
 			src/libft/ft_putunbr_fd_base.c\
+			src/libft/ft_putaddr_fd.c\
 			src/char_handler.c\
 			src/str_handler.c\
 			src/addr_handler.c\
