@@ -6,7 +6,7 @@
 #    By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 19:26:50 by dmaldona          #+#    #+#              #
-#    Updated: 2022/11/09 11:32:14 by dmaldona         ###   ########.fr        #
+#    Updated: 2022/11/21 01:25:10 by dmaldona         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ SRCS	= main.c\
 			src/libft/ft_putchar_fd.c\
 			src/libft/ft_numlen.c\
 			src/libft/ft_putnbr_fd_base.c\
-			src/libft/ft_putunbr_fd.c\
+			src/libft/ft_putunbr_fd_base.c\
 			src/char_handler.c\
 			src/str_handler.c\
 			src/addr_handler.c\

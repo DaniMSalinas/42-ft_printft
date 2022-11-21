@@ -6,7 +6,7 @@
 /*   By: dmaldona <dmaldona@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 19:40:53 by dmaldona          #+#    #+#             */
-/*   Updated: 2022/11/08 18:34:08 by dmaldona         ###   ########.fr       */
+/*   Updated: 2022/11/21 01:26:21 by dmaldona         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ int	get_size(va_list content, char type)
 	else if (type == 'u')
 		return (uns_handler(va_arg(content, int), 1, "0123456789"));
 	else if (type == 'x')
-		return (num_handler(va_arg(content, int), 1, "0123456789abcdef"));
+		return (uns_handler(va_arg(content, int), 1, "0123456789abcdef"));
 	else if (type == 'X')
-		return (num_handler(va_arg(content, int), 1, "0123456789ABCDEF"));
+		return (uns_handler(va_arg(content, int), 1, "0123456789ABCDEF"));
 	else if (type == '%')
 		return (char_handler('%', 1));
 	return (0);
