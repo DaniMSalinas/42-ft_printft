@@ -17,7 +17,7 @@ int	ft_numlen(int n, char *base)
 	int		number_size;
 	int		base_size;
 	long	m;
-	
+
 	number_size = 0;
 	base_size = ft_strlen(base);
 	m = (long)n;

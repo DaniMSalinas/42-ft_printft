@@ -14,10 +14,6 @@
 
 int	num_handler(int n, int fd, char *base)
 {
-	int	size_number;
-	
-	size_number = 0;
 	ft_putnbr_fd_base(n, fd, base);
-	size_number += ft_numlen(n, base);
-	return (size_number);
+	return (ft_numlen(n, base));
 }
